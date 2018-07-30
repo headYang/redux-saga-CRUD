@@ -22,4 +22,6 @@ const App = () => {
     </Provider>
 };
 
+sagaMiddleware.run(rootSaga);
+
 AppRegistry.registerComponent(appName, () => App);
