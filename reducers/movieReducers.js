@@ -8,13 +8,14 @@ const movieReducers = (movies = INITIAL_STATE, action) => {
             return action.receivedMovies;
         case FETCH_FAILED:
             return [];
-        case ADD_MOVIE:
-            console.log(action);
-            return [
-                ...movies,
-                { name: action.payload.newMovie, releaseYear: action.payload.releaseYear }
-            ];
-        
+        // case ADD_MOVIE:
+        //     console.log(action);
+        //     return [
+        //         ...movies,
+        //         { name: action.payload.newMovie, releaseYear: action.payload.releaseYear }
+        //     ];
+        // case ADD_MOVIE:
+        //     return
         default: 
             return movies;
     }

@@ -17,8 +17,8 @@ const mapDispatchToProps = (dispatch) => {
         // onSuccessFetch: () => {
         //     dispatch(fetchSuccessAction());
         // },
-        onAddMovie: (newmoive, releaseYear) => {
-            dispatch(addMovieAction(newmoive, releaseYear));
+        onAddMovie: (newmoive) => {
+            dispatch(addMovieAction(newmoive));
         }
     }
 };
