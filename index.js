@@ -16,11 +16,11 @@ import rootSaga from './sagas/rootSaga';
 const sagaMiddleware = createSagaMiddleware();
 
 let store = createStore(allReducers, applyMiddleware(sagaMiddleware));
-const App = () => {
+const App = () => (
     <Provider store={store}>
         <MovieContainer/>
     </Provider>
-};
+);
 
 sagaMiddleware.run(rootSaga);
 

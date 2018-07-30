@@ -7,10 +7,13 @@ export const fetchMoviesAction = (sort) => {
     }
 }
 
-export const addMovieAction = (newMovie) => {
+export const addMovieAction = (newMovie, releaseYear) => {
     return {
         type: ADD_MOVIE,
-        newMovie
+        payload: {
+            newMovie,
+            releaseYear
+        }
     }
 }
 

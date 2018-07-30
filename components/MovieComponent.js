@@ -24,13 +24,13 @@ export default class MovieComponent extends Component {
                 </Text>
                 <View style = {{ height: 100, margin: 10}}>
                     <TextInput
-                        style = {{ flex: 1, margin: 5,padding: 10, borderColor: 'gray', borderwidth: 1}}
+                        style = {{ flex: 1, margin: 5,padding: 10, borderColor: 'gray', borderWidth: 1}}
                         onChangeText = {(text) => this.setState({ movieName: text })}
                         value = {this.state.movieName}
                         placeholder = 'enter new movie name'
                     />
                     <TextInput 
-                        style = {{ flex: 1, margin: 5, padding: 10, borderColor: 'gray', borderwidth: 1, width:120}}
+                        style = {{ flex: 1, margin: 5, padding: 10, borderColor: 'gray', borderWidth: 1, width:120}}
                         onChangeText = {(text) => this.setState({ releaseYear: text})}
                         value = {this.state.releaseYear}
                         placeholder = 'Release Year'
@@ -48,7 +48,7 @@ export default class MovieComponent extends Component {
                         containerStyle = {{ padding: 10, margin: 10, width: 150, height: 45, borderRadius: 10, backgroundColor: 'darkviolet'}}
                         style = {{ fontSize: 18, color: 'white'}}
                         onPress = {() => {
-
+                            this.props.onAddMovie(this.state.movieName, this.state.releaseYear);
                         }}
                     >Add Movies</Button>
                 </View>  
