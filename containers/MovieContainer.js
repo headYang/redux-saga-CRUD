@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import MovieComponent from '../components/MovieComponent';
-import { addMovieAction, fetchFailedAction, fetchSuccessAction, fetchMoviesAction } from '../actions';
+import { addMovieAction, fetchFailedAction, fetchSuccessAction, fetchMoviesAction, 
+        updateItemAction, updateItemSuccessAction } from '../actions';
 
 //Action
 const mapStateToProps = (state) => {
@@ -19,6 +20,9 @@ const mapDispatchToProps = (dispatch) => {
         // },
         onAddMovie: (newmoive) => {
             dispatch(addMovieAction(newmoive));
+        },
+        onUpdateItem: (updatedMovie) => {
+            dispatch(updateItemAction(updatedMovie));
         }
     }
 };

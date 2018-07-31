@@ -4,3 +4,4 @@ export const FETCH_MOVIE = 'FETCH_MOVIE';
 
 export const FETCH_SUCCEEDED = 'FETCH_SUCCEEDED';
 export const FETCH_FAILED = 'FETCH_FAILED';
+export const UPDATE_MOVIE = 'UPDATE_MOVIE';

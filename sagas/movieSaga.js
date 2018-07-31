@@ -28,5 +28,5 @@ function* addNewMovie(action) {
 }
 
 export function* watchAddNewMovie() {
-    yield takeLatest(ADD_MOVIE, addNewMovie);
+    // yield takeLatest(ADD_MOVIE, addNewMovie);
 }

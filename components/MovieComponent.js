@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import Button from 'react-native-button';
 
+
 import {
     Text, View, Image, Alert, Platform, TextInput, FlatList
 } from 'react-native';
+import FlatListItemComponent from './FlatListItemComponent';
 
 export default class MovieComponent extends Component {
     constructor(props) {
@@ -60,13 +62,10 @@ export default class MovieComponent extends Component {
                 <FlatList
                     data = {this.props.movies}
                     keyExtractor = {(item) => item.name}
-                    renderItem = {({item, index}) => <Text style = {{
-                        padding: 10,
-                        fontSize: 15,
-                        color: 'white',
-                        fontWeight: 'bold',
-                        backgroundColor: (index % 2 === 0) ? 'dodgerblue' : 'mediumseagreen'
-                    }} >{`${item.name}, releaseYear = ${item.releaseYear}`}</Text>
+                    renderItem = {({item, index}) => (
+                         <FlatListItemComponent item = {item} itemIndex = {index} movieComponent = {this}/>
+                    
+                    )
                     }
                 />
             </View>
