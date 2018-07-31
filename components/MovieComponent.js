@@ -61,7 +61,7 @@ export default class MovieComponent extends Component {
                 </View>  
                 <FlatList
                     data = {this.props.movies}
-                    keyExtractor = {(item) => item.name}
+                    keyExtractor = {(item, index) => index.toString()}
                     renderItem = {({item, index}) => (
                          <FlatListItemComponent item = {item} itemIndex = {index} movieComponent = {this}/>
                     
